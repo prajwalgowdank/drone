@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="nav">
+        <img src="{% static 'images/logo.jpg' %}" alt="logo">
+    <nav>
+        <ul>
+            <li class="active"><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'service' %}">SERVICES</a></li>
+            <li><a href="{% url 'portfolio' %}">PORTFOLIO</a></li>
+            <li><a href="{% url 'clients' %}">CLIENT ALBUMS</a></li>
+            <li><a href="{% url 'about' %}">ABOUT</a></li>
+            <li><a href="{% url 'contact' %}">CONTACT</a></li>
+            <li><a href="{% url 'logout' %}">Log Out</a></li>
+        </ul>
+    </nav>
+    <div class="icons">
+        
+        <a href=""><button class="msg">Welcome {{user.username}}</button> </a>
+    </div>
+</div>
+    <div class="main-1">
+        <div class="service">
+            <span></span>
+            <p class="one">01</p>
+            <h3>SERVICES</h3>
+         </div>
+    </div>
+    <div class="contact">
+        <div style="color:rgb(195, 43, 43) ;font-size:35px;position:absolute ;margin-left:35% ;padding-top:40px ;">{{ msg }}</div>
+        <div class="contact-msg">
+            <h5 class="contact-heading">SEND A MESSAGE </h5>
+            <P class="contact-paragraph">
+                I'm a paragraph. Click here to add <br> your own text and edit me. Let your <br> users get to know you.
+            </P>
+        </div>
+        <div class="form">
+             <form action="{% url 'savedata' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="name" id="name" placeholder="Name" required><br>
+                <input type="email" name="email" id="email" placeholder="Email" required><br>
+                <input type="text" name="text" id="text" placeholder="Subject" required><br>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea><br>
+                <input type="submit" id="btn" value="Submit" class="submit">
+             </form>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="icon">
+            <a href=""> <i class="ri-facebook-fill"></i></a>
+           <a href=""> <i class="ri-instagram-line"></i></a>
+           <a href=""> <i class="ri-youtube-line"></i></a>
+           <a href=""> <i class="ri-linkedin-fill"></i></a>
+        </div>
+    </footer>
+
+    <button id="topbtn"><i class="ri-arrow-up-line"></i></button>
+    
+
+    <script>
+        $ (document).ready(function(){
+    
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 500){
+                    $('#topbtn').fadeIn();
+                } else {
+                    $('#topbtn').fadeOut();
+                }
+            });
+        $('#topbtn').click(function(){
+            $('html,body').animate({scrollTop : 0},800);
+        });
+    
+        });
+
+</script>
+
+
+</body>
+</html>

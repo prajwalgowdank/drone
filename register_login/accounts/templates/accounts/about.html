@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="nav">
+        <img src="{% static 'images/logo.jpg' %}" alt="logo">
+    <nav>
+        <ul>
+            <li class="active"><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'service' %}">SERVICES</a></li>
+            <li><a href="{% url 'portfolio' %}">PORTFOLIO</a></li>
+            <li><a href="{% url 'clients' %}">CLIENT ALBUMS</a></li>
+            <li><a href="{% url 'about' %}">ABOUT</a></li>
+            <li><a href="{% url 'contact' %}">CONTACT</a></li>
+            <li><a href="{% url 'logout' %}">Log Out</a></li>
+        </ul>
+    </nav>
+    <div class="icons">
+ 
+        <a href=""><button class="msg">Welcome {{user.username}}</button> </a>
+    </div>
+</div>
+
+    <div class="main-1">
+        <div class="service">
+            <span></span>
+            <p class="one">02</p>
+            <h3>ABOUT</h3>
+         </div>
+    </div>
+
+    <div class="about-section">
+            <div class="about-content-1">
+                <div class="about-content-1-details">
+                <h1 class="about-content-heading">
+                    WE TAKE <br> PICTURES <br> FROM ABOVE</h1>
+                    <p class="about-content-paragraph">I'm a paragraph. Click here to add your own text <br> and edit me. It’s easy. Just click “Edit Text” or <br> double click me to add your own content and <br> make changes to the font. Feel free to drag and <br> drop me anywhere you like on your page. I’m a <br> great place for you to tell a story and let your <br> users know a little more about you.</p>
+                </div>
+            </div> 
+            <div class="about-content-1">
+                <img src="{% static 'images/82fcd3_9e4c3be84d834be997f0347582cd2675_mv2_d_4288_2848_s_4_2.webp' %}" alt="">
+            </div>
+    </div>
+
+
+    <div class="main-1">
+        <div class="service">
+            <p class="one"></p>
+            <h3>WHO WE ARE</h3>
+         </div>
+    </div>
+
+    <div class="wwa">
+        <div class="wwa-align">
+            <div class="wwa-1  wwa-margin">
+                <div class="wwa-img">
+                    <img src="{% static 'images/new.jpeg' %}" alt="">
+                    <h3 class="wwa-heading">Prajwal</h3>
+                    <p class="wwa-paragraph ">I'm a title. <br> Click here to add your <br> own text and edit me.</p>
+                </div>
+            </div>
+            <div class="wwa-1 wwa-margin-left">
+                <div class="wwa-img">
+                    <img src="{% static 'images/chandu.jpeg' %}" alt="">
+                    <h3 class="wwa-heading">Chandrashekar</h3>
+                    <p class="wwa-paragraph ">I'm a title. <br> Click here to add your <br> own text and edit me.</p>
+                </div>
+                
+            </div>
+            <div class="wwa-1  wwa-margin-left">
+                <div class="wwa-img">
+                    <img src="{% static 'images/vinay.jpeg' %}" alt="">
+                    <h3 class="wwa-heading">Vinay</h3>
+                    <p class="wwa-paragraph ">I'm a title. <br> Click here to add your <br> own text and edit me.</p>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <div class="icon">
+            <a href=""> <i class="ri-facebook-fill"></i></a>
+           <a href=""> <i class="ri-instagram-line"></i></a>
+           <a href=""> <i class="ri-youtube-line"></i></a>
+           <a href=""> <i class="ri-linkedin-fill"></i></a>
+        </div>
+    </footer>
+
+    
+    <button id="topbtn"><i class="ri-arrow-up-line"></i></button>
+    
+
+    <script>
+        $ (document).ready(function(){
+    
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 500){
+                    $('#topbtn').fadeIn();
+                } else {
+                    $('#topbtn').fadeOut();
+                }
+            });
+        $('#topbtn').click(function(){
+            $('html,body').animate({scrollTop : 0},800);
+        });
+    
+        });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="nav">
+        <img src="{% static 'images/logo.jpg' %}" alt="logo">
+    <div class="icons">
+        <i class="ri-account-circle-fill"></i>
+        <a href="{% url 'login' %}"><button class="log-in">Log In</button> </a>
+        <a href="{% url 'register' %}"><button class="log-in">Register</button> </a>
+    </div>
+</div>
+
+
+<div class="main">
+    <img src="{% static 'images/home.jpg' %}" alt="">
+    <h1 class="first-line">FROM A DIFFERENT </h1>
+      <h1 class="second-line"> POINT OF VIEW</h1>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <img src="{% static 'images/logo.jpg' %}" alt="logo">
+    <nav>
+        <ul>
+            <li class="active"><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'service' %}">SERVICES</a></li>
+            <li><a href="{% url 'portfolio' %}">PORTFOLIO</a></li>
+            <li><a href="{% url 'clients' %}">CLIENT ALBUMS</a></li>
+            <li><a href="{% url 'about' %}">ABOUT</a></li>
+            <li><a href="{% url 'contact' %}">CONTACT</a></li>
+            <li><a href="{% url 'logout' %}">Log Out</a></li>
+        </ul>
+    </nav>
+    <div class="icons">
+        
+        <a href=""><button class="msg">Welcome {{user.username}}</button> </a>
+    </div>
+</div>
+
+    <div class="main-1">
+        <div class="service">
+            <span></span>
+            <p class="one">01</p>
+            <h3>SERVICES</h3>
+         </div>
+    </div>
+
+
+    <div class="about-content">
+        <div class="about-info">
+            <h1 class="about-heading">AFFORDABLE PRICES,
+                <br><span class="a-h">  GREAT RESULTS</span></h1>
+            
+            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to <br> add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. <br> I’m a great place for you to tell a story and let your users know a little more about you.</p>
+            
+           <p> This is a great space to write long text about your company and your services. You can use this space to go into a <br> little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story <br> of how you came up with the idea for your business and what makes you different from your competitors. Make your <br> company stand out and show your visitors who you are.</p>
+        </div>
+    </div>
+
+    <div class="drone-section">
+        <div class="drone">
+            <img src="{% static 'images/82fcd3_76013faf0f5348188d57d37d8f6f4ccf_mv2_d_5472_3648_s_4_2.jpeg' %}" alt="">
+        </div>
+    </div>
+    
+
+    <div class="main-1">
+        <div class="service">
+            <p class="one">01</p>
+            <h3>SERVICES</h3>
+         </div>
+    </div>
+
+
+    <div class="services-section">
+        <div class="services-block">
+            <div class="book1">
+                <div class="book1-img">
+                    <img src="{% static 'images/aeial.jpg' %}" alt="">
+                </div>
+            <a href="{% url 'arial' %}"> <h4 class="h4 hover">ARIAL PHOTOGRAPHY</h4></a>
+                <p>I'm a paragraph. Click here to <br> add your own text and edit me.</p>
+                <p>3 hr <br>
+                    $199</p>
+          
+            <a href="" ><button class="btn1">BOOK NOW</button></a>
+            </div>
+
+            <div class="book1">
+                <div class="book1-img">
+                    <img src="{% static 'images/video.jpg' %}" alt="">
+                </div>
+            <a href="{% url 'video' %}"> <h4 class="h4 hover">VIDEO EDITING</h4></a>
+                <p>I'm a paragraph. Click here to <br> add your own text and edit me.</p>
+                <p>4 hr <br>
+                    $249</p>
+                    <a href="" ><button class="btn1">BOOK NOW</button></a>
+            </div>
+
+            <div class="book1">
+                <div class="book1-img">
+                    <img src="{% static 'images/3d mapping.png' %}" alt="">
+                </div>
+            <a href="{% url 'mapping' %}"> <h4 class="h4 hover">3D MAPPING</h4></a>
+                <p>I'm a paragraph. Click here to <br> add your own text and edit me.</p>
+                <p>6 hr <br>
+                    $349</p>
+                    <a href="" ><button class="btn1">BOOK NOW</button></a>
+            </div>
+        </div> 
+    </div>
+
+
+    <footer>
+        <div class="icon">
+            <a href=""> <i class="ri-facebook-fill"></i></a>
+           <a href=""> <i class="ri-instagram-line"></i></a>
+           <a href=""> <i class="ri-youtube-line"></i></a>
+           <a href=""> <i class="ri-linkedin-fill"></i></a>
+        </div>
+    </footer>
+    
+    <button id="topbtn"><i class="ri-arrow-up-line"></i></button>
+    
+
+    <script>
+        $ (document).ready(function(){
+    
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 500){
+                    $('#topbtn').fadeIn();
+                } else {
+                    $('#topbtn').fadeOut();
+                }
+            });
+        $('#topbtn').click(function(){
+            $('html,body').animate({scrollTop : 0},800);
+        });
+    
+        });
+
+</script>
+</body>
+</html>

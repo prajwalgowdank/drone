@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="main">
+        <div class="main-img">
+            <img src="{% static 'images/lgin.jpg' %}" alt="">
+        <div class="card">
+            <div class="card-title">
+                <h3><i class="ri-user-fill"></i> User <span id="action_title">Register</span ></h3>
+            </div>
+            <div class="card-body-register">
+                <div class="card-body-top">
+                    <button class="btn" id="register">Register</button>
+                    <div id="bottom_line"></div>
+                </div>
+                <div class="card-body-bottom">
+                        <form action="" id="register_form" method="post">
+                            {% csrf_token %}
+                            <input type="text" name="username" class="input-field" required="" placeholder="enter your name"><br><br>
+                            <input type="email" name="email" class="input-field" required="" placeholder="Enter your email"><br><br>
+                            <input type="password" name="password1" class="input-field" required=""  placeholder="Enter your password"><br><br>
+                            <input type="password" name="password2" class="input-field" required=""  placeholder="Confirm your password"><br><br>
+                            <div style="color:red ;">
+                            {% if form.errors %}
+                            {% for field in form %}
+                                {% for error in field.errors %}
+                                    {{ error|escape }}
+                                {% endfor %}
+                            {% endfor %}
+                            {% for error in form.non_field_errors %}
+                                {{ error|escape }}
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                            <input type="submit" class="submit-field" value="Register">
+                        </form>
+                            <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+</div>
+    </div>
+</body>
+</html>

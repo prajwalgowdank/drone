@@ -1,0 +1,169 @@
+{% load static %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+    <h1>Welcome {{user.username}}</h1>
+    <img src="{% static 'images/images.jpg' %}" alt="">
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="nav">
+            <img src="{% static 'images/logo.jpg' %}" alt="logo">
+        <nav>
+            <ul>
+                <li class="active"><a href="{% url 'home' %}">HOME</a></li>
+                <li><a href="{% url 'service' %}">SERVICES</a></li>
+                <li><a href="{% url 'portfolio' %}">PORTFOLIO</a></li>
+                <li><a href="{% url 'clients' %}">CLIENT ALBUMS</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            
+            <a href=""><button class="msg">Welcome {{user.username}}</button> </a>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <img src="{% static 'images/index.jpg' %}" alt="">
+        <h1 class="first-line">FROM A DIFFERENT </h1>
+        <h1 class="second-line"> POINT OF VIEW</h1>
+    </div>
+    
+    <div class="main-1">
+        <div class="service">
+           
+            <p class="one">01</p>
+            <h3>SERVICES</h3>
+         </div>
+    </div>
+
+    <div class="main-2">
+            <div class="book1">
+               <a href="{% url 'arial'%}"><h4 class="hover">ARIAL PHOTOGRAPHY</h4></a>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, reiciendis.</p>
+              <a href="" ><button class="btn1">BOOK NOW</button></a>
+            </div>
+
+            <div class="book1">
+                <a href="{% url 'video'%}"> <h4 class="hover">VIDEO EDITING</h4></a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, reiciendis.</p>
+                <a href=""><button class="btn1">BOOK NOW</button></a>
+             </div>
+
+             <div class="book1">
+                <a href="{% url 'mapping' %}"> <h4 class="hover">3D MAPPING</h4></a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, reiciendis.</p>
+                <a href=""><button class="btn1">BOOK NOW</button></a>
+             </div>
+    </div>
+    <div class="main-3">
+        <div class="images">
+            <img src="{% static 'images/82fcd3_7bcfa3e384824714b6750485581402f4_mv2_d_3992_2992_s_4_2.jpg ' %}" alt="">
+            <img src="{% static 'images/82fcd3_640f0266b175464aaefd6c80a18b35c4_mv2.png' %}" alt="">
+            <img src="{% static 'images/82fcd3_07f0a016c70d438f911f74cf85497b01_mv2_d_5184_3456_s_4_2.jpeg' %}" alt="">
+        </div>
+    </div>
+
+    <div class="main-1">
+        <div class="service">
+            <span></span>
+            <p class="one">02</p>
+            <h3>ABOUT</h3>
+         </div>
+    </div>
+
+
+    <div class="about-content">
+        <div class="about-info">
+            <h1 class="about-heading">WE TAKE PICTURES <br><span class="a-h"> FROM ABOVE</span></h1>
+            <h4>NEW PHOTOGRAPHY OPPORTUNITIES USING DRONES</h4>
+            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy.
+                Just click “Edit Text” or <br> double click me to add your own
+                content and make changes to the font. Feel free to drag and <br> drop me anywhere you like on your page.
+                I’m a great place for you to tell a story and let your <br> users know a little more about you.</p>
+            <p> <a href="{% url 'about' %}">LEARN MORE</a></p>
+        </div>
+    </div>
+
+    <div class="main-1">
+        <div class="service">
+            <span></span>
+            <p class="one">03</p>
+            <h3>GALLERY</h3>
+         </div>
+    </div>
+    
+    <div class="main-6">
+        <div class="images">
+            <img src="{% static 'images/87bacb6b89bd4e14afa01e4660d667dc.jpeg' %}" alt="">
+            <img src="{% static 'images/ae79cd1c7e5b49d98224f489ac3ebd1f.jpeg' %}" alt="">
+            <img src="{% static 'images/cad5973f03dc4186a155e04437c7ccc9.jpeg' %}" alt="">
+        </div>
+        <div class="images-1">
+            <img src="{% static 'images/a1c08034e2474c8e8f5ce433e5380032.jpeg' %}" alt="">
+            <img src="{% static 'images/8ec2f7b62e7648f1b2589af18ff47a1c.jpg' %}" alt="">
+        </div>
+    </div>
+
+    <div class="main-1">
+        <div class="service">
+            <span></span>
+            <p class="one"></p>
+            <h3></h3>
+         </div>
+    </div>
+
+    <footer>
+        <div class="icon">
+            <a href=""> <i class="ri-facebook-fill"></i></a>
+           <a href=""> <i class="ri-instagram-line"></i></a>
+           <a href=""> <i class="ri-youtube-line"></i></a>
+           <a href=""> <i class="ri-linkedin-fill"></i></a>
+        </div>
+    </footer>
+
+    <button id="topbtn"><i class="ri-arrow-up-line"></i></button>
+    
+
+    <script>
+        $ (document).ready(function(){
+    
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 500){
+                    $('#topbtn').fadeIn();
+                } else {
+                    $('#topbtn').fadeOut();
+                }
+            });
+        $('#topbtn').click(function(){
+            $('html,body').animate({scrollTop : 0},800);
+        });
+    
+        });
+
+</script>
+
+</body>
+</html>
